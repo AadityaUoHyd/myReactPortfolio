@@ -47,9 +47,19 @@ import nexus from '../assets/nexus.png'
 import tomcat from '../assets/tomcat.png'
 import system from '../assets/system.png'
 import theDevops from '../assets/theDevops.jpg'
+
+import keycloakLogo from '../assets/keycloakLogo.png'
+import rabbitmqLogo from '../assets/rabbitmqLogo.png'
+import argoLogo from '../assets/argoLogo.png'
+import prismaLogo from '../assets/prismaLogo.png'
+import clerkLogo from '../assets/clerkLogo.png'
+import appwriteLogo from '../assets/appwriteLogo.png'
+import hibernateLogo from '../assets/hibernateLogo.png'
+import postmanLogo from '../assets/postmanLogo.png'
+import vault from '../assets/vault.png'
+
 import aadi1 from '../assets/aadi1.png'
 import aadi2 from '../assets/aadi2.png'
-
 import aadi3 from '../assets/aadi3.jpg'
 import aadi4 from '../assets/aadi4.jpg'
 import aadi5 from '../assets/aadi5.jpg'
@@ -97,21 +107,21 @@ const About = () => {
                                 <h3 className='text-2xl font-semibold text-gray-900'>My Journey</h3>
                                 <p className='mt-4 text-lg text-gray-600'>
                                     I started my journey in web development with a passion for creating intuitive and scalable applications. With proficiency in the Java
-                                     full stack (Java, Spring boot, Microservices, Angular, React Js). I have built Projects such as a Java-full-stack AadiChatterBox, 
-                                     e-commerce, etc. Also worked in MERN stack projects such as food ordering website, AadityaGram, etc. Learnt Python-Django stack 
-                                     as well. My projects demonstrate my ability to integrate powerful backend solutions with user-friendly frontend designs.
+                                    full stack (Java, Spring boot, Microservices, Angular, React Js). I have built Projects such as a Java-full-stack AadiChatterBox, 
+                                    e-commerce, etc. Also worked in MERN stack projects such as food ordering website, AadityaGram, etc. Learnt Python-Django stack 
+                                    as well. My projects demonstrate my ability to integrate powerful backend solutions with user-friendly frontend designs.
                                 </p>
-                                <div className="flex">
-                                    <img src={JavaStack} alt="" className='p-2 rounded-lg h-80 w-80 mt-4 inline-block' />
-                                    <img src={MernStack} alt="" className='p-2 rounded-lg h-65 w-60 mt-4 inline-block' />
-                                </div>
-                                
+                                <p className='mt-4 text-lg text-purple-600'>
+                                    <strong>Area of Expertise - Java Full Stack.</strong>
+                                </p>
+                                <img src={JavaStack} alt="javastack" className='p-2 rounded-lg h-100 w-80 mt-4 inline-block' />
+                                <img src={MernStack} alt="mernstack" className='p-2 rounded-lg h-65 w-60 mt-4 inline-block' />
                             </div>
                             <div className='border border-blue-200 rounded-lg md:p-5 py-5  flex flex-col gap-7 items-center shadow-lg shadow-blue-300'>
-                                <h3 className='text-2xl font-semibold text-green-600'>Skills & Expertise</h3>
+                                <h3 className='text-2xl font-semibold text-green-600'>My Skills</h3>
                                 <div className='flex items-center justify-center flex-wrap gap-3'>
 
-                                <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
                                         <img src={git} alt="git" className='h-6 w-8 rounded-full' />
                                         <span className='font-semibold'>Git</span>
                                     </div>
@@ -156,6 +166,10 @@ const About = () => {
                                         <span className='font-semibold'>Spring Boot</span>
                                     </div>
                                     <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={hibernateLogo} alt="hibernate" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>Hibernate</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
                                         <img src={Tailwind} alt="tailwind" className='h-6 w-8 rounded-full' />
                                         <span className='font-semibold'>Tailwind Css</span>
                                     </div>
@@ -194,6 +208,26 @@ const About = () => {
                                     <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
                                         <img src={Microservices} alt="microservices" className='h-6 w-8 rounded-full' />
                                         <span className='font-semibold'>Microservices</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={keycloakLogo} alt="keycloakLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>Keycloak</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={rabbitmqLogo} alt="rabbitmqLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>RabbitMQ</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={clerkLogo} alt="clerkLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>Clerk</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={prismaLogo} alt="prismaLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>Prisma</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={appwriteLogo} alt="appwriteLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>AppWrite</span>
                                     </div>
                                     <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
                                         <img src={graphql} alt="graphql" className='h-6 w-8 rounded-full' />
@@ -287,6 +321,18 @@ const About = () => {
                                     <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
                                         <img src={jmeter} alt="jmeter" className='h-6 w-8 rounded-full' />
                                         <span className='font-semibold'>JMeter</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={postmanLogo} alt="postmanLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>Postman</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={vault} alt="vault" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>Vault</span>
+                                    </div>
+                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
+                                        <img src={argoLogo} alt="argoLogo" className='h-6 w-8 rounded-full' />
+                                        <span className='font-semibold'>ArgoCD</span>
                                     </div>
                                     <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
                                         <img src={linux} alt="linux" className='h-6 w-8 rounded-full' />

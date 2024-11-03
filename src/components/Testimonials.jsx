@@ -19,31 +19,36 @@ const Testimonials = () => {
             id: 1,
             name: "Jay Chaudhry",
             rating: 5,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!"
+            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            company: "CEO, ABC Technologies"
         },
         {
             id: 2,
             name: "Arvind Krishna",
             rating: 4,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!"
+            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            company: "CEO, XYZ Infotech"
         },
         {
             id: 3,
-            name: "Sundar Pichai",
+            name: "Deep Goyal",
             rating: 5,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!"
+            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            company: "CEO, Grapes Solutions"
         },
         {
             id: 4,
-            name: "Elon Musk",
+            name: "Revathi Advaithi",
             rating: 5,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!"
+            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            company: "CEO, Revathi Finances"
         },
         {
             id: 5,
             name: "Leena Nair",
             rating: 4,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!"
+            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            company: "CEO, Star Enterprises"
         }
     ]
 
@@ -102,7 +107,7 @@ const Testimonials = () => {
                                 <div className='flex justify-between items-center'>
                                     <div>
                                         <h3 className='font-semibold text-red-500 text-lg'>{item.name}</h3>
-                                        <p className='text-sm mt-1'>CEO, ABC Technologies</p>
+                                        <p className='text-sm mt-1'>{item.company}</p>
                                     </div>
                                     <Quote className='text-red-400'/>
                                 </div>
