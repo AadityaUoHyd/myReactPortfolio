@@ -1,6 +1,7 @@
 import React from 'react'
 import AadityaGram from '../assets/AadityaGram.png'
 import AadiChatterBox from '../assets/AadiChatterBox.png'
+import RoomRosterApp from '../assets/RoomRosterApp.png'
 import Cards from './Cards'
 
 
@@ -20,6 +21,13 @@ const Projects = () => {
           image: AadiChatterBox,
           live: "https://aadichatterbox.netlify.app/",
           github: "https://github.com/AadityaUoHyd/aadichatterbox-frontend"
+        },
+        {
+          title: 'RoomRosterApp',
+          desc: 'Demo app to book conference rooms online for any events across India. Built using Next-Js 14 and AppWrite.',
+          image: RoomRosterApp,
+          live: "https://room-roster-app.vercel.app/",
+          github: "https://github.com/AadityaUoHyd/RoomRosterApp"
         },
       ];
 
