@@ -16,7 +16,8 @@ const Profile = () => {
                <h1 className='lg:text-7xl text-4xl font-bold lg:leading-snug'>Hi There, <br />I'm Bachchu <span className='text-red-500'>Chatterjee.</span></h1>
                <p className='md:text-2xl text-xl mb-4'>Full Stack Java Developer & DevOps Engineer.</p>
                <p className='mb-4'>I'm a passionate software developer with expertise in Java, Springboot, Angular, React, Next.js, MERN stack, Python, Django, AWS Cloud, DevOps, and modern web technologies. I love creating beautiful & functional websites, and APIs that solve real world problems.</p>
-               <button className='bg-black text-white px-3 py-2 w-max rounded-md'><a href="https://drive.google.com/file/d/1zmPK84xWim4vhW9ZTXdBHQRLopMeoG5t/view?usp=sharing" download target='_blank'>Download CV</a></button>
+               <button className='bg-black text-white px-3 py-2 w-max rounded-md'><a href="https://drive.google.com/file/d/1zmPK84xWim4vhW9ZTXdBHQRLopMeoG5t/view?usp=sharing" download target='_blank' className="hover:text-red-500"
+               >Download CV</a></button>
             </div>
             <div className='md:w-1/2 relative flex justify-center items-end'>
                  <img src={abc} alt="" className='lg:h-[90vh] h-96' />
