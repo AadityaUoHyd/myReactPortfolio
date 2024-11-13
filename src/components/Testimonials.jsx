@@ -19,35 +19,35 @@ const Testimonials = () => {
             id: 1,
             name: "Jay Chaudhry",
             rating: 5,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            text: "Outstanding technical expertise and efficiency. I had the pleasure of working with Mr. Chatterjee on a complex web application, and the results were beyond my expectations. The project was delivered on time, with clean and maintainable code. Communication was clear and efficient, and they were always proactive in suggesting improvements. Undoubtly, I highly recommended him for anyone looking for a professional and reliable Java developer!",
             company: "CEO, ABC Technologies"
         },
         {
             id: 2,
             name: "Arvind Krishna",
             rating: 4,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
-            company: "CEO, XYZ Infotech"
+            text: "Excellent problem-solving and attention to detail. Working with AB Chatterjee was an absolute pleasure. They quickly understood our requirements and provided an elegant, scalable solution using Java. Their attention to detail and ability to troubleshoot issues under tight deadlines saved us time and resources. What impressed me most was their dedication to delivering quality & optimized work, also performance and user experience was awesome.",
+            company: "CEO, Krishna Infotech"
         },
         {
             id: 3,
             name: "Deep Goyal",
             rating: 5,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            text: "Highly skilled and easy to work with. We hired Bachchu Chatterjee for a Java-based web development project, and they exceeded all expectations. Not only were they technically proficient, but they also made the whole process smooth and hassle-free. They took the time to explain technical concepts to our non-technical team and were always open to feedback. The end result was a high-quality product that met all of our requirements.",
             company: "CEO, Grapes Solutions"
         },
         {
             id: 4,
             name: "Revathi Advaithi",
             rating: 5,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            text: "Great collaboration and timely delivery. I hired Aaditya to build a custom web application for my business, and I couldn’t be happier with the results. They were incredibly responsive to our needs and provided regular updates throughout the process. The project was delivered on time, and the Java code was well-structured, efficient, and easy to understand. I would definitely work with them again on future web development projects!",
             company: "CEO, Revathi Finances"
         },
         {
             id: 5,
             name: "Leena Nair",
             rating: 4,
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor, voluptatibus quos ipsam et est!",
+            text: "Reliable, professional, and detail-oriented. I can’t recommend Aadi highly enough. They worked on the back-end of our Java web application, and their contribution was instrumental in delivering a product that was both functional and stable. They consistently followed best practices, optimized performance, and kept us informed every step of the way. What impressed me the most was their commitment, and the solution was tailored to our goals.",
             company: "CEO, Star Enterprises"
         }
     ]

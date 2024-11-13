@@ -9,18 +9,31 @@ import Lottie from 'lottie-react';
 import contact from '../assets/Contact.json';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const sendEmail = () => {
-    const email = 'aadiraj48@gmail.com';
-    const subject = encodeURIComponent('New Message from Contact Form');
-    const body = encodeURIComponent(message);
     
-    // Open the email client
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    const mailSender_name = encodeURIComponent(name);
+	  const mailSender_email = encodeURIComponent(email);
+	  const mailSender_message = encodeURIComponent(message);
 
-    // Clear the message after sending
-    setMessage('');
+    if(mailSender_name && mailSender_email && mailSender_message){
+
+      // Opens email client & sends mail.
+      window.location.href ='mailto:aadiraj48@gmail.com?subject=New%20Message%20From%20My%20Portfolio%20Contacts&body=' +
+                         'Name: ' + mailSender_name + '%0D%0A' +
+                         'Email: ' + mailSender_email + '%0D%0A' +
+                         'Message: ' + mailSender_message;
+
+      // Clear the message after contacts input boxes.
+      setMessage('');
+      setEmail('');
+      setName('');
+    }else {
+      alert('Please fill in all fields.');
+    }
   };
 
   return (
@@ -64,15 +77,17 @@ const Contact = () => {
             </div>
             <Lottie animationData={contact} className='w-[350px] mx-auto lg:w-[500px]' />
           </div>
-          <form className='w-full md:w-1/2 bg-gray-100 rounded-lg border border-red-300 shadow-lg shadow-red-500 p-10'>
+          <form className='w-full md:w-1/2 bg-gray-100 rounded-lg border border-red-300 shadow-lg shadow-red-500 p-10' id="contact-form">
             <h1 className='text-gray-900 text-4xl font-bold mb-7'>Contact Me</h1>
             <div className='mb-4'>
               <label htmlFor="name" className='block text-sm font-medium text-gray-700'>Name</label>
-              <input type="text" id='name' placeholder='Your Full Name..' className='mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50' />
+              <input type="text" id='name' placeholder='Your Full Name..' value={name}
+                onChange={(e) => setName(e.target.value)}  className='mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50' />
             </div>
             <div className='mb-4'>
               <label htmlFor="email" className='block text-sm font-medium text-gray-700'>Email</label>
-              <input type="email" id='email' placeholder='Your Email-Id..' className='mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50' />
+              <input type="email" id='email' placeholder='Your Email-Id..' value={email}
+                onChange={(e) => setEmail(e.target.value)}  className='mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50' />
             </div>
             <div className='mb-4'>
               <label htmlFor="message" className='block text-sm font-medium text-gray-700'>Message</label>

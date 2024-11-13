@@ -24,7 +24,7 @@ const Projects = () => {
         },
         {
           title: 'RoomRosterApp',
-          desc: 'Demo app to book conference rooms online for any events across India. Built using Next-Js 14 and AppWrite.',
+          desc: 'App to book conference rooms online for any events across India. Built using AppWrite & Next-JS.',
           image: RoomRosterApp,
           live: "https://room-roster-app.vercel.app/",
           github: "https://github.com/AadityaUoHyd/RoomRosterApp"
