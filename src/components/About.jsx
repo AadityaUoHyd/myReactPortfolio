@@ -67,7 +67,6 @@ import aadi6 from '../assets/aadi6.jpg'
 import aadi7 from '../assets/aadi7.jpg'
 import aadi8 from '../assets/aadi8.jpg'
 import aadi9 from '../assets/aadi9.jpg'
-import aadi10 from '../assets/aadi10.jpg'
 import convoPic from '../assets/convoPic.jpg'
 import convoPic2 from '../assets/convoPic2.jpg'
 import convoPic3 from '../assets/convoPic3.png'
@@ -352,7 +351,7 @@ const About = () => {
                             or DevOps. An avid reader of non-fictional books, especially biographies & autobiographies. Geopolitics, Cricket and Movies are my other 
                             hobbies.
                         </p>
-                        <p className='flex'>
+                        <p className='flex flex-wrap justify-start mt-4'>
                         <img src={aadi1} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
                         <img src={aadi2} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
                         <img src={aadi3} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
@@ -362,7 +361,6 @@ const About = () => {
                         <img src={aadi7} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
                         <img src={aadi8} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
                         <img src={aadi9} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
-                        <img src={aadi10} alt="" className='p-2 rounded-lg h-20 w-30 mt-4 transform duration-500 transition-transform hover:scale-150' />
                         </p>
                     </div>
                 </div>
