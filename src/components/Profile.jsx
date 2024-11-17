@@ -15,7 +15,7 @@ const Profile = () => {
             <div className='md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 px-6 lg:px-0 lg:mt-0 mt-10'>
                <h1 className='lg:text-7xl text-4xl font-bold lg:leading-snug'>Hi There, <br />I'm Bachchu <span className='text-red-500'>Chatterjee.</span></h1>
                <p className='md:text-2xl text-xl mb-4'>Full Stack Java Developer & DevOps Engineer.</p>
-               <p className='mb-4'>I'm a passionate software developer with expertise in Java, Springboot, Angular, React, Next.js, MERN stack, Python, Django, AWS Cloud, DevOps, and modern web technologies. I love creating beautiful & functional websites, and APIs that solve real world problems.</p>
+               <p className='mb-4'>I'm a passionate software developer with expertise in Java, Springboot, and Microservices. I have ample experience in Angular, React, Next JS, MERN stack, Python-Django, AWS Cloud, DevOps, and how modern web technologies work. I like creating beautiful functional websites and APIs, that solve real world problems.</p>
                <button className='bg-black text-white px-3 py-2 w-max rounded-md'><a href="https://drive.google.com/file/d/1zmPK84xWim4vhW9ZTXdBHQRLopMeoG5t/view?usp=sharing" download target='_blank' className="hover:text-red-500"
                >Download CV</a></button>
             </div>

@@ -84,7 +84,7 @@ const About = () => {
                             
                                 
                                 <div className='mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto inline-block'>
-                                    People also knows me with another name, <strong>"Aaditya"</strong>, my nick name. I'm a Full-Stack Java Developer with expertise in Web and API development. I've also acquired 
+                                    <strong>"Aaditya"</strong>is my preferred nickname. I'm a Full-Stack Java Developer with expertise in Web and API development. I've also acquired 
                                     knowledge of DevOps with AWS Cloud.
                                 </div>
                                 <div>
