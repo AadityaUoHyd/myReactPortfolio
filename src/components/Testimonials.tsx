@@ -39,47 +39,47 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-16 bg-gray-100 dark:bg-gray-800">
+    <section id="testimonials" className="py-12 sm:py-16 bg-gray-100 dark:bg-gray-800 w-full max-w-full overflow-x-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-12"
+        className="text-center mb-8 sm:mb-12"
       >
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white font-poppins">
           What My Clients Say
         </h2>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 font-inter">
+        <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 font-inter">
           I offer part-time freelancing services. Here’s feedback from my satisfied clients.
         </p>
       </motion.div>
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-5">
         <Swiper
           style={{
             '--swiper-pagination-color': '#EF4444',
             '--swiper-pagination-bullet-inactive-color': '#999999',
             '--swiper-pagination-bullet-inactive-opacity': '1',
-            '--swiper-pagination-bullet-size': '10px',
-            '--swiper-pagination-bullet-horizontal-gap': '6px',
+            '--swiper-pagination-bullet-size': '8px',
+            '--swiper-pagination-bullet-horizontal-gap': '4px',
           } as any}
           modules={[Pagination, Autoplay]}
           loop={true}
           speed={600}
           autoplay={{ delay: 5000 }}
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={16}
           breakpoints={{
-            320: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            320: { slidesPerView: 1, spaceBetween: 8 },
+            640: { slidesPerView: 2, spaceBetween: 12 },
+            1024: { slidesPerView: 3, spaceBetween: 16 },
           }}
           pagination={{ el: '.swiper-pagination', type: 'bullets', clickable: true }}
-          className="mySwiper"
+          className="mySwiper w-full"
         >
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
               <motion.div
-                className="border border-gray-300 dark:border-gray-600 shadow-lg shadow-red-300 dark:shadow-red-700 rounded-lg flex flex-col p-6 bg-white dark:bg-gray-700 h-[280px]"
+                className="border border-gray-300 dark:border-gray-600 shadow-lg shadow-red-300 dark:shadow-red-700 rounded-lg flex flex-col p-4 sm:p-6 bg-white dark:bg-gray-700 h-[280px]"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -89,24 +89,24 @@ const Testimonials = () => {
                     .map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-4 h-4 ${i < item.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+                        className={`w-3 sm:w-4 h-3 sm:h-4 ${i < item.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
                       />
                     ))}
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-sm font-inter flex-grow overflow-hidden">
+                <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm font-inter flex-grow overflow-hidden">
                   {item.text}
                 </p>
                 <div className="flex justify-between items-center mt-4">
                   <div>
-                    <h3 className="font-semibold text-red-500 text-base font-poppins">{item.name}</h3>
+                    <h3 className="font-semibold text-red-500 text-sm sm:text-base font-poppins">{item.name}</h3>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 font-inter">{item.company}</p>
                   </div>
-                  <Quote className="text-red-400 w-5 h-5" />
+                  <Quote className="text-red-400 w-4 sm:w-5 h-4 sm:h-5" />
                 </div>
               </motion.div>
             </SwiperSlide>
           ))}
-          <div className="swiper-pagination my-10 gap-1 relative"></div>
+          <div className="swiper-pagination my-8 sm:my-10 gap-1 relative"></div>
         </Swiper>
       </div>
     </section>

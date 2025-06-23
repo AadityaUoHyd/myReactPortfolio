@@ -97,39 +97,39 @@ const Articles = () => {
   ];
 
   return (
-    <section id="articles" className="py-16 bg-white dark:bg-gray-900">
+    <section id="articles" className="py-12 sm:py-16 bg-white dark:bg-gray-900 w-full max-w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
           data-aos="fade-up"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white font-poppins flex justify-center items-center">
-            <img src="/logo.png" className="w-8 h-8 mr-2" alt="Aaditya's Profile Icon" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white font-poppins flex justify-center items-center">
+            <img src="/logo.png" className="w-6 sm:w-8 h-6 sm:h-8 mr-2" alt="Aaditya's Profile Icon" />
             Articles
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-4 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 font-inter">
             A collection of my written works, exploring topics in software development, artificial intelligence, and socio-political dynamics.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {articles.map((article, idx) => (
             <motion.div
               key={article.title}
-              className="h-full"
+              className="h-full w-full"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
               data-aos="fade-up"
               data-aos-delay={100 * (idx + 1)}
             >
               <div className="card h-full shadow-md border-0 rounded-lg bg-gray-100 dark:bg-gray-800 overflow-hidden">
-                <div className="card-body p-6">
+                <div className="card-body p-4 sm:p-6">
                   <div className={`icon mb-4 text-center ${article.iconColor}`}>
-                    <i className={`bi ${article.icon}`} style={{ fontSize: '2.5rem' }}></i>
+                    <i className={`bi ${article.icon}`} style={{ fontSize: '2rem', lineHeight: '2rem' }}></i>
                   </div>
-                  <h3 className="card-title text-xl font-bold text-center text-gray-900 dark:text-white font-poppins">
+                  <h3 className="card-title text-base sm:text-xl font-bold text-center text-gray-900 dark:text-white font-poppins">
                     <a
                       href={article.link}
                       className="text-decoration-none text-gray-900 dark:text-white hover:text-red-500 dark:hover:text-red-400"
@@ -139,7 +139,7 @@ const Articles = () => {
                       {article.title}
                     </a>
                   </h3>
-                  <p className="card-text text-gray-600 dark:text-gray-400 mt-2 text-sm">{article.description}</p>
+                  <p className="card-text text-gray-600 dark:text-gray-400 mt-2 text-xs sm:text-sm font-inter">{article.description}</p>
                 </div>
               </div>
             </motion.div>

@@ -20,13 +20,13 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60 px-4 lg:px-0"
+      className="sticky top-0 z-50 w-full max-w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60 px-4 lg:px-0 overflow-x-hidden"
     >
       <div className="max-w-7xl mx-auto flex h-14 items-center justify-between">
         <a href="#" className="flex items-center space-x-2">
-          <img src={Logo} alt="Aaditya Chatterjee" className="w-36" />
+          <img src={Logo} alt="Aaditya Chatterjee" className="w-32 sm:w-36" />
         </a>
-        <nav className="hidden md:flex items-center space-x-6 text-lg font-medium font-poppins">
+        <nav className="hidden md:flex items-center space-x-4 sm:space-x-6 text-base sm:text-lg font-medium font-poppins">
           {navLinks.map((link) => (
             <motion.a
               key={link.href}
@@ -43,26 +43,26 @@ const Navbar = () => {
               className={`p-2 rounded-full ${theme === 'light' ? 'bg-red-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
               title="Light Mode"
             >
-              <Sun size={18} />
+              <Sun size={16} className="sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={() => setTheme('dark')}
               className={`p-2 rounded-full ${theme === 'dark' ? 'bg-red-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
               title="Dark Mode"
             >
-              <Moon size={18} />
+              <Moon size={16} className="sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={() => setTheme('system')}
               className={`p-2 rounded-full ${theme === 'system' ? 'bg-red-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
               title="System Mode"
             >
-              <Monitor size={18} />
+              <Monitor size={16} className="sm:w-5 sm:h-5" />
             </button>
           </div>
         </nav>
         <button
-          className="inline-flex md:hidden items-center justify-center rounded-md"
+          className="inline-flex md:hidden items-center justify-center rounded-md p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <span className="sr-only">Open main menu</span>
@@ -78,14 +78,14 @@ const Navbar = () => {
           initial={{ height: 0 }}
           animate={{ height: 'auto' }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white dark:bg-gray-900"
+          className="md:hidden bg-white dark:bg-gray-900 w-full max-w-full overflow-x-hidden"
         >
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+                className="block rounded-md px-3 py-2 text-sm sm:text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
@@ -96,19 +96,19 @@ const Navbar = () => {
                 onClick={() => setTheme('light')}
                 className={`p-2 rounded-full ${theme === 'light' ? 'bg-red-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
               >
-                <Sun size={18} />
+                <Sun size={16} className="sm:w-5 sm:h-5" />
               </button>
               <button
                 onClick={() => setTheme('dark')}
                 className={`p-2 rounded-full ${theme === 'dark' ? 'bg-red-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
               >
-                <Moon size={18} />
+                <Moon size={16} className="sm:w-5 sm:h-5" />
               </button>
               <button
                 onClick={() => setTheme('system')}
                 className={`p-2 rounded-full ${theme === 'system' ? 'bg-red-500 text-white' : 'text-gray-600 dark:text-gray-300'}`}
               >
-                <Monitor size={18} />
+                <Monitor size={16} className="sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>

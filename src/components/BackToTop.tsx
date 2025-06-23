@@ -19,14 +19,15 @@ const BackToTop = () => {
 
   return (
     <motion.button
-      className={`fixed bottom-8 right-8 p-3 bg-red-500 text-white rounded-full shadow-lg hover:bg-red-600 transition ${
+      className={`fixed bottom-4 sm:bottom-6 right-4 sm:right-6 p-3 sm:p-4 bg-red-500 text-white rounded-full shadow-lg hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 transition-all duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       onClick={scrollToTop}
       animate={{ y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.3 }}
+      aria-label="Scroll to top"
     >
-      <ArrowUp size={24} />
+      <ArrowUp size={24} className="sm:w-6 sm:h-6" />
     </motion.button>
   );
 };

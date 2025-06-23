@@ -19,25 +19,25 @@ const Profile = () => {
 
   const particlesConfig = {
     particles: {
-      number: { value: 50, density: { enable: true, value_area: 800 } },
+      number: { value: 30, density: { enable: true, value_area: 600 } },
       color: { value: theme === 'dark' ? '#ffffff' : '#4B5563' },
       shape: { type: 'circle' },
       opacity: { value: 0.5, random: true },
       size: { value: 3, random: true },
       line_linked: {
         enable: true,
-        distance: 150,
+        distance: 120,
         color: theme === 'dark' ? '#ffffff' : '#EF4444',
         opacity: 0.4,
         width: 1,
       },
       move: {
         enable: true,
-        speed: 2,
-        direction: 'none', // valid value as per MoveDirection type
+        speed: 1.5,
+        direction: 'none',
         random: false,
         straight: false,
-        outModes: { default: 'out' }, // updated from out_mode to outModes
+        outModes: { default: 'out' },
         bounce: false,
       },
     },
@@ -46,11 +46,11 @@ const Profile = () => {
       events: {
         onhover: { enable: true, mode: 'repulse' },
         onclick: { enable: true, mode: 'push' },
-        resize: { enable: true }, // updated to object as expected by IResizeEvent
+        resize: { enable: true },
       },
       modes: {
-        repulse: { distance: 100, duration: 0.4 },
-        push: { particles_nb: 4 },
+        repulse: { distance: 80, duration: 0.4 },
+        push: { particles_nb: 3 },
       },
     },
     retina_detect: true,
@@ -59,34 +59,37 @@ const Profile = () => {
   return (
     <section
       id="profile"
-      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 p-8 w-full"
+      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 p-4 sm:p-8 w-full max-w-full overflow-x-hidden"
     >
       <Particles
         id="tsparticles"
         options={particlesConfig}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 w-full h-full"
       />
       {/* Left Section: Passport Image + Text */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 flex flex-col items-center w-full md:w-1/2 px-4"
+        className="relative z-10 flex flex-col items-center w-full md:w-1/2 px-4 mb-6 md:mb-0"
         data-aos="fade-up"
       >
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white font-poppins">
-          Aaditya Bachchu Chatterjee
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white font-poppins text-center">
+          Aaditya Bachchu
         </h1>
-        <h2 className="text-lg text-red-500 dark:text-red-400 font-poppins mt-1">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-500 font-poppins text-center">
+          Chatterjee
+        </h1>
+        <h2 className="text-base sm:text-lg text-amber-500 dark:text-amber-400 font-poppins mt-1 text-center">
           Full-Stack Developer & AI Enthusiast
         </h2>
-        <p className="mt-4 text-base text-gray-600 dark:text-gray-300 font-inter leading-relaxed max-w-md text-center">
+        <p className="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-inter leading-relaxed max-w-md text-center">
           Passionate about building scalable web applications and integrating AI solutions. Skilled in Java, Spring Boot, React, AWS, and DevOps, I create robust systems that solve real-world problems.
         </p>
-        <div className="mt-6 flex justify-center gap-3">
+        <div className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
           <a
             href="#contact"
-            className="px-6 py-3 bg-red-500 text-white rounded-full font-semibold text-sm hover:bg-red-600 dark:hover:bg-red-700 transition-colors duration-300"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-red-600 dark:hover:bg-red-700 transition-colors duration-300"
           >
             Get in Touch
           </a>
@@ -94,7 +97,7 @@ const Profile = () => {
             href="https://github.com/AadityaUoHyd"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-full font-semibold text-sm hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors duration-300"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 dark:bg-gray-700 text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors duration-300"
           >
             View GitHub
           </a>
@@ -112,7 +115,7 @@ const Profile = () => {
         <img
           src={HeroImg}
           alt="Hero Image"
-          className="w-full max-h-[80vh] object-cover"
+          className="w-full max-w-full sm:max-w-md md:max-w-lg max-h-[60vh] sm:max-h-[80vh] object-cover"
         />
       </motion.div>
     </section>
