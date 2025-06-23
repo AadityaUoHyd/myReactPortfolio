@@ -44,15 +44,26 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
         {/* About Me */}
         <div className="flex-col items-center md:items-center text-center md:text-center">
-          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-white font-poppins">About Me</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-red-500 font-poppins">About Me</h2>
           <p className="text-xs sm:text-sm max-w-xs mx-auto md:mx-0 font-inter">
             I’m Aaditya Bachchu Chatterjee—a full-stack developer, writer, and curious mind exploring tech, geopolitics, and the world through code and words.
           </p>
+          <p className="text-xs text-gray-600 dark:text-gray-400 mt-4 mb-4">
+                Website Developed by -{" "}
+                <a
+                  href="https://www.linkedin.com/in/aaditya-bachchu-chatterjee-0485933b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-500 hover:text-yellow-600 transition-colors duration-200"
+                >
+                  Aaditya B Chatterjee
+                </a>
+              </p>
         </div>
 
         {/* Social Media */}
         <div className="flex flex-col items-center md:items-center text-center md:text-left">
-          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-white font-poppins">Connect</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-red-500 font-poppins">Connect</h2>
           <ul className="space-y-2 text-xs sm:text-sm">
             {socialLinks.map((link) => (
               <li key={link.href}>
@@ -60,7 +71,7 @@ const Footer = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                className="flex items-center justify-center md:md:gap-2 justify-start hover:text-red-500 hover:bg-gray-800 px-2 py-1 rounded-lg transition-all duration-300 cursor-pointer z-10"
+                  className="flex items-center justify-center gap-2 hover:text-red-500 hover:bg-gray-800 px-2 py-1 rounded-lg transition-all duration-300 cursor-pointer z-10"
                 >
                   <link.icon size={16} className="sm:w-5 sm:h-5" />
                   <span>{link.label}</span>
@@ -71,8 +82,8 @@ const Footer = () => {
         </div>
 
         {/* Personal Blogs */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-white font-poppins">My Blogs</h2>
+        <div className="flex flex-col items-center md:items-center text-center md:text-left">
+          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-red-500 font-poppins">My Blogs</h2>
           <ul className="space-y-2 text-xs sm:text-sm">
             {blogLinks.map((link) => (
               <li key={link.href}>
@@ -80,7 +91,7 @@ const Footer = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center md:gap-2 justify-start hover:text-red-500 hover:bg-gray-800 px-2 py-1 rounded-lg transition-all duration-300 cursor-pointer z-10"
+                  className="flex items-center justify-center gap-2 hover:text-red-500 hover:bg-gray-800 px-2 py-1 rounded-lg transition-all duration-300 cursor-pointer z-10"
                 >
                   <link.icon size={16} className="sm:w-5 sm:h-5" />
                   <span>{link.label}</span>
@@ -92,12 +103,12 @@ const Footer = () => {
 
         {/* Fun Facts */}
         <div className="flex flex-col items-center md:items-center text-center md:text-center">
-          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-white font-poppins">Fun Facts</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-4 text-red-500 font-poppins">Fun Facts</h2>
           <div className="space-y-2 text-xs sm:text-sm">
             {funFacts.map((fact, index) => (
               <motion.div
                 key={index}
-                className="flex items-center justify-center md:md:gap-2 justify-start gap-2 px-4 py-2 bg-gray-800 dark:bg-gray-700 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300"
+                className="flex items-center sm:justify-center md:gap-2 justify-start gap-2 px-4 py-2 bg-gray-800 dark:bg-gray-700 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >

@@ -15,7 +15,10 @@ import aadi6 from '../assets/aadi6.jpg';
 import aadi7 from '../assets/aadi7.jpg';
 import aadi8 from '../assets/aadi8.jpg';
 import aadi9 from '../assets/aadi9.jpg';
+import leetcodeIcon from '../assets/leetcode.png';
+import hackerrankIcon from '../assets/hack.png';
 import { skills } from './skills';
+import { Code, Cpu } from 'lucide-react';
 
 const About = () => {
   const timelineEvents = [
@@ -79,8 +82,8 @@ const About = () => {
               <strong>Area of Expertise: Java Full Stack</strong>
             </p>
             <div className="flex gap-2 sm:gap-4 mt-4 flex-wrap">
-              <img src={JavaStack} alt="Java Stack" className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 md:h-24 rounded-xl object-cover shadow-md" loading="lazy" />
-              <img src={MernStack} alt="MERN Stack" className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 md:h-24 rounded-xl object-cover shadow-md" loading="lazy" />
+              <img src={JavaStack} alt="Java Stack" className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 md:h-24 rounded-xl object-fit shadow-md" loading="lazy" />
+              <img src={MernStack} alt="MERN Stack" className="w-36 sm:w-28 md:w-32 h-16 sm:h-20 md:h-24 rounded-xl object-fit shadow-md" loading="lazy" />
             </div>
             <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mt-6 sm:mt-8 font-poppins">Timeline</h3>
             <div className="mt-4">
@@ -100,6 +103,34 @@ const About = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="mt-4">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mt-6 sm:mt-8 font-poppins">Find Me In :</h4>
+              <div className="flex flex-col gap-2 sm:gap-3 mt-2">
+                <div className="flex">
+                  <a
+                    href="https://leetcode.com/u/Aaditya-B-Chatterjee/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-red-500 dark:hover:text-red-500 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer z-50 pointer-events-auto"
+                  >
+                    <img src={leetcodeIcon} alt="LeetCode" className="w-5 h-5 object-contain" />
+                    <span className="text-xs sm:text-sm font-inter">LeetCode</span>
+                  </a>
+                </div>
+                <div className="flex">
+                  <a
+                    href="https://www.hackerrank.com/profile/AadiBChatterjee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-red-500 dark:hover:text-red-500 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer z-50 pointer-events-auto"
+                  >
+                    <img src={hackerrankIcon} alt="HackerRank" className="w-5 h-5 object-contain" />
+                    <span className="text-xs sm:text-sm font-inter">HackerRank</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
