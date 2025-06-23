@@ -184,7 +184,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-28 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="projects" className="text-center items-center py-28 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -230,7 +230,7 @@ const Projects = () => {
           </ul>
         </motion.div>
 
-        <div ref={containerRef} className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16 xl:grid-cols-3 isotope-container">
+        <div ref={containerRef} className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16 xl:grid-cols-3 isotope-container text-center">
           {projects.map((project, idx) => (
             <motion.div
               key={project.title}
