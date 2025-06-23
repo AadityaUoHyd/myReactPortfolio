@@ -42,7 +42,7 @@ const Projects = () => {
 
     return () => {
       filters.forEach((filter) => {
-        filter.removeEventListener('click', () => {});
+        filter.removeEventListener('click', () => { });
       });
       if (isotope.current) {
         isotope.current.destroy();
@@ -214,12 +214,16 @@ const Projects = () => {
             {['All', 'Web Apps', 'Cloud/DevOps', 'AI/ML'].map((filter, idx) => (
               <li key={idx}>
                 <motion.button
-                  className={`nav-link px-6 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
-                    idx === 0
+                  className={`nav-link px-6 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${idx === 0
                       ? 'filter-active bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg'
                       : 'bg-white dark:bg-gray-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900 hover:shadow-lg'
-                  }`}
-                  data-filter={idx === 0 ? '*' : `.filter-${filter.toLowerCase().replace('/', '-')}`}
+                    }`}
+                  data-filter={
+                    idx === 0 ? '*' :
+                      filter === 'Web Apps' ? '.filter-app' :
+                        filter === 'Cloud/DevOps' ? '.filter-cloud' :
+                          '.filter-ml'
+                  }
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
